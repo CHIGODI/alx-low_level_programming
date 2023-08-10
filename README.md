@@ -1,0 +1,2 @@
+ALX_SE Learning Repo: Embarking on My Coding Odyssey
+Join me in my ALX Software Engineering (ALX_SE) journey! This repository showcases my C programming growth, featuring projects, tasks, and lessons from the ALX_SE program. As a budding developer, I'll be sharing my progress, challenges, and accomplishments as I learn to wield the power of C. Let's code, learn, and excel together in ALX_SE!
