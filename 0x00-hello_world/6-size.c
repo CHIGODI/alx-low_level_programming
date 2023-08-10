@@ -3,7 +3,7 @@
 /**
  * main - Entry point for the program
  *
- * Description: This is the main function that prints the size of various types:
+ * Description: Function that prints the size of various types:
  *              - char
  *              - int
  *              - long int
