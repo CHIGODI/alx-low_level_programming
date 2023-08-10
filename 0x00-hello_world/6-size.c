@@ -1,6 +1,12 @@
 #include <stdio.h>
 /**
  * main: program that prints size of various types
+ * Description: This is the main function that prints size of each 
+ * char
+ * int 
+ * long int
+ * long int
+ * lon lon int
  *
  * Return: Always 0 (Success)
  *
