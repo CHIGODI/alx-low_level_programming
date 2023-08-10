@@ -1,2 +1,3 @@
 #!/bin/bash
-gcc -c $CFILE
+BASENAME="${CFILE%.c}"
+gcc -c $BASENAME
