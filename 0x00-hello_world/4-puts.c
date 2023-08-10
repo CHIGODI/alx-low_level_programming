@@ -2,6 +2,7 @@
 
 /**
 *program to print a string with put function
+*Return: Always 0 (Success)
 */
 int main(void)
 {
