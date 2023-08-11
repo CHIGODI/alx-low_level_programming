@@ -14,7 +14,7 @@ int main(void)
 		int first = numbers / 10;
 		int last = numbers % 10;
 
-		if (first != last)
+		if (first != last && (first * 10 + last) != (last * 10 + first))
 		{
 			putchar(first + '0');
 			putchar(last + '0');
