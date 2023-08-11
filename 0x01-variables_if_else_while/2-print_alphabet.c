@@ -13,8 +13,9 @@ int main(void)
 		'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't',
 		'u', 'v', 'w', 'x', 'y', 'z'
 	};
+	int i;
 
-	for (int i = 0; i < sizeof(alphabets); i++)
+	for (i = 0; i < 26; i++)
 	{
 		putchar(alphabets[i]);
 	}
