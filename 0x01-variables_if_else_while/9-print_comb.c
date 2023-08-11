@@ -10,21 +10,11 @@ int main(void)
 {
 	int numbers;
 
-	for (numbers = 0; numbers <= 99; numbers++)
+	for (numbers = 0; numbers <= 9; numbers++)
 	{
 		int first = (numbers /  10) + '0';
-		int last = (numbers % 10) + '0';
-
-		if (first != 0)
-		{
-			putchar(first + '0');
-		}
-		putchar(last + '0');
-		if (numbers < 99)
-		{
-			putchar(',');
-			putchar(' ');
-		}
+		putchar(num + '0');
+		putchar('0');
 	}
 	return (0);
 }
