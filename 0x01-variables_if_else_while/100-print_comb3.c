@@ -14,12 +14,12 @@ int main(void)
 		int first = numbers / 10;
 		int last = numbers % 10;
 
-		if (numbers != 0)
+		if (first != last)
 		{
 			putchar(first + '0');
 			putchar(last + '0');
 		}
-		if (numbers < 89 && numbers > 00)
+		if (numbers < 89 && first != last)
 		{
 			putchar(',');
 			putchar(' ');
