@@ -15,7 +15,11 @@ int main(void)
 		int num = numbers;
 		
 		putchar(num + '0');
-		putchar('0');
+		if (num < 9)
+		{
+			putchar(',');
+			putchar(' ');
+		}
 	}
 	return (0);
 }
