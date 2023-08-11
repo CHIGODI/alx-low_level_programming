@@ -12,8 +12,7 @@ int main(void)
 
 	for (numbers = 0; numbers <= 9; numbers++)
 	{
-		int num = (numbers /  10) + '0';
-		putchar(num + '0');
+		putchar(numbers + '0');
 		putchar('0');
 	}
 	return (0);
