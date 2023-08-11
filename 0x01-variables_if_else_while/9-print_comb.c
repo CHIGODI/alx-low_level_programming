@@ -11,8 +11,10 @@ int main(void)
 	int numbers;
 
 	for (numbers = 0; numbers <= 9; numbers++)
-	{
-		putchar(numbers + '0');
+	{	
+		int num = numbers;
+		
+		putchar(num + '0');
 		putchar('0');
 	}
 	return (0);
