@@ -8,11 +8,11 @@
  */
 int main(void)
 {
-	char str[] = "_puchar";
+	char str[] = "_putchar";
 	int ch;
 
 	for (ch = 0; str[ch] != '\0'; ch++)
-	{	
+	{
 		putchar(str[ch]);
 	}
 		putchar('\n');
