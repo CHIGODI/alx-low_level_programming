@@ -17,10 +17,12 @@ void print_to_98(int n)
 			_putchar(i + '0');
 		}
 		else
+		{
 			for (j = n; j >= 98; j--)
 			{
-				putchar(j + '0');
+				_putchar(j + '0');
 			}
+		}
 	}
 	return (0);
 }
