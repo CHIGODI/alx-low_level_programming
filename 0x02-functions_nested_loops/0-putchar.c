@@ -1,3 +1,4 @@
+#include <stdio.h>
 #include "main.h"
 /**
  * main - A program that prints _putchar using putchar function.
@@ -11,9 +12,9 @@ int main(void)
 	int ch;
 
 	for (ch = 0; str[ch] != '\0'; ch++)
-	{
-		_putchar(str[ch]);
+	{	
+		putchar(str[ch]);
 	}
-	_putchar('\n');
+		putchar('\n');
 	return (0);
 }
