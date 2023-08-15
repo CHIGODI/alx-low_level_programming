@@ -5,15 +5,14 @@
  */
 int _islower(int c)
 {
-	int lower = 48, upper = 49;
+	int lower = 49, upper = 48;
 
 	if (c >= 'a' && c <= 'z')
 	{
-		_putchar(lower);
+		return lower;
 	}
 	else
 	{
-		_putchar(upper);
+		return upper;
 	}
-	return (0);
 }
