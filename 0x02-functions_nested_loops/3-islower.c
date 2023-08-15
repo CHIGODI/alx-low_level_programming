@@ -2,6 +2,10 @@
 /**
  * _islower - A function that checks for lowercase characters.
  *
+ * c - paramter c is the character.
+ *
+ * Return: 1 is lower 0 therwise.
+ *
  */
 int _islower(int c)
 {
@@ -9,10 +13,10 @@ int _islower(int c)
 
 	if (c >= 'a' && c <= 'z')
 	{
-		return lower;
+		return (lower);
 	}
 	else
 	{
-		return upper;
+		return (upper);
 	}
 }
