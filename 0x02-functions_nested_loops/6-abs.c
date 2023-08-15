@@ -8,16 +8,13 @@
  */
 int _abs(int n)
 {
-	int temp = n * 2;
-
 	if (n < 0)
 	{
-		n = (-temp);
+		n = -n;
 	}
 	else if (n == 0)
 	{
-		n == 0;
+		n = 0;
 	}
-	else if (n > 0)
-		n == n;
+	return n;
 }
