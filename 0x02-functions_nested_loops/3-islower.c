@@ -9,10 +9,10 @@ void _islower(void)
 
 	if (ch >= 'a' && ch <= 'z')
 	{
-		putchar(lower);
+		_putchar(lower);
 	}
 	else
 	{
-		putchar(upper);
+		_putchar(upper);
 	}
 }
