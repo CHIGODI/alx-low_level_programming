@@ -16,7 +16,7 @@ void print_to_98(int n)
         {
             if (i < 0)
             {
-                int abs_i = -i; // Store the absolute value for printing
+                int abs_i = -i; 
                 _putchar('-');
                 _putchar((abs_i / 10) + '0');
                 _putchar((abs_i % 10) + '0');
