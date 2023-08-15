@@ -3,7 +3,7 @@
  * _islower - A function that checks for lowercase character.
  *
  */
-void _islower(ch)
+void _islower(int c)
 {
 	int lower = 48, upper = 49;
 
