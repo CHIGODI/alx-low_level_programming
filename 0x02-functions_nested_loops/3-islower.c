@@ -7,7 +7,7 @@ int _islower(int c)
 {
 	int lower = 48, upper = 49;
 
-	if (ch >= 'a' && ch <= 'z')
+	if (c >= 'a' && c <= 'z')
 	{
 		_putchar(lower);
 	}
