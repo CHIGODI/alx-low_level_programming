@@ -3,9 +3,9 @@
  * _islower - A function that checks for lowercase character.
  *
  */
-void _islower(void)
+void _islower(ch)
 {
-	int lower = 48, upper = 49, ch;
+	int lower = 48, upper = 49;
 
 	if (ch >= 'a' && ch <= 'z')
 	{
