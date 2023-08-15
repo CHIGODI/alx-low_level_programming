@@ -12,7 +12,7 @@ int _isalpha(int c)
 	char l, k;
 	int flag = 0;
 
-	for (l = 'a', k = 'A'; l <= 'z', k <= 'Z'; l++, k++)
+	for (l = 'a', k = 'A'; l <= 'z' && k <= 'Z'; l++, k++)
 	{
 		if (c == l || c == k)
 		{
