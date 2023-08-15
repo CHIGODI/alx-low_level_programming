@@ -5,7 +5,18 @@
  * Return: Always 0(Success)
  *
  */
+void print_alphabet_x10(void);
 int main(void)
+{
+	print_alphabet_x10();
+	putchar('\n');
+	return (0);
+}
+/**
+ * print_alphabet_x10 - A function to loop over alphabets.
+ *
+ */
+void print_alphabet_x10(void)
 {
 	int alphabets;
 
@@ -13,6 +24,4 @@ int main(void)
 	{
 		putchar(alphabets);
 	}
-	putchar('\n');
-	return (0);
 }
