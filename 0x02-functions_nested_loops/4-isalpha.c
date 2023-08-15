@@ -2,7 +2,7 @@
 /**
  * _isalpha - Fuction that checks for alphabet character.
  *
- *int c - is the parameter for the function.
+ * @c - is the parameter for the function.
  *
  * Return: 1 is letter 0 otherwise.
  *
