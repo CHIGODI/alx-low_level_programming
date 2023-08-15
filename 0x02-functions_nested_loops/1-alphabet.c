@@ -1,0 +1,18 @@
+#include <stdio.h>
+/**
+ * main - A program to print alphabets in lowercase using putchar function.
+ *
+ * Return: Always 0(Success)
+ *
+ */
+int main(void)
+{
+	int alphabets;
+
+	for (alphabets = 'a'; alphabets <= 'z'; alphabets++)
+	{
+		putchar(alphabets);
+	}
+	putchar('\n');
+	return (0);
+}
