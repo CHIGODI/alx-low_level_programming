@@ -1,3 +1,4 @@
+#include "main.h" 
 /**
  * print_alphabet_x10 - A function to loop over alphabets.
  *
@@ -10,4 +11,5 @@ void print_alphabet(void)
 	{
 		_putchar(alphabets);
 	}
+	_putchar('\n');
 }
