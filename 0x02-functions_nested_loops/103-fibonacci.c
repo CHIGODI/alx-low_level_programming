@@ -10,12 +10,12 @@ int main(void)
 {
 	long int prev = 1, curr = 2, next, sum = 0, i;
 
-	for (i = 0; i < 50; i++)
+	while (prev < 400000)
 	{
 		next = curr + prev;
 		prev = curr;
 		curr = next;
-		if (prev < 400000 && prev % 2 == 0)
+		if (prev % 2 == 0)
 		{
 			sum += prev;
 		}
