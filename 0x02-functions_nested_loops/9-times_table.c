@@ -14,11 +14,10 @@ void times_table(void)
             int times = i * j;
 
             if (j != 0)
-                putchar(','), putchar(' ');
-
-            putchar(times < 10 ? ' ' : times / 10 + '0');
-            putchar(times % 10 + '0');
+                _putchar(','), _putchar(' ');
+                _putchar(times < 10 ? ' ' : times / 10 + '0');
+                _putchar(times % 10 + '0');
         }
-        putchar('\n');
+        _putchar('\n');
     }
 }
