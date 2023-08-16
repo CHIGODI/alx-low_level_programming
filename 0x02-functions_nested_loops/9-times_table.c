@@ -1,3 +1,8 @@
+#include "main.h"
+/**
+ * times_table - function that prints 9 times table starting with o.
+ *
+ */
 void times_table(void)
 {
     int i, j;
