@@ -21,13 +21,18 @@ void times_table(void)
                 _putchar(' ');
             }
 
-            _putchar(first + '0');
-            _putchar(last + '0');
-
-            if (j == 9)
+            if (times < 10)
             {
-                _putchar('\n');
+                _putchar(' ');
             }
+            else
+            {
+                _putchar(first + '0');
+            }
+
+            _putchar(last + '0');
         }
+        _putchar('\n');
     }
 }
+
