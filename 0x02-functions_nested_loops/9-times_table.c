@@ -12,8 +12,6 @@ void times_table(void)
         for (j = 0; j < 10; j++)
         {
             int times = i * j;
-            int first = times / 10;
-            int last = times % 10;
 
             if (j != 0)
             {
@@ -24,13 +22,15 @@ void times_table(void)
             if (times < 10)
             {
                 _putchar(' ');
+                _putchar(' ');
             }
             else
             {
-                _putchar(first + '0');
+                _putchar(' ');
+                _putchar((times / 10) + '0');
             }
 
-            _putchar(last + '0');
+            _putchar((times % 10) + '0');
         }
         _putchar('\n');
     }
