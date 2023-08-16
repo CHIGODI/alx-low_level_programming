@@ -9,6 +9,7 @@
 void print_to_98(int n)
 {
     int i;
+    int abs_num, divisor; // Declare variables at the beginning
 
     if (n <= 98)
     {
@@ -17,8 +18,8 @@ void print_to_98(int n)
             if (i < 0)
             {
                 _putchar('-');
-                int abs_num = -i;
-                int divisor = 1;
+                abs_num = -i;
+                divisor = 1;
                 while (abs_num / divisor > 9)
                     divisor *= 10;
                 while (divisor > 0)
@@ -30,7 +31,7 @@ void print_to_98(int n)
             }
             else
             {
-                int divisor = 1;
+                divisor = 1;
                 while (i / divisor > 9)
                     divisor *= 10;
                 while (divisor > 0)
@@ -51,7 +52,7 @@ void print_to_98(int n)
     {
         for (i = n; i >= 98; i--)
         {
-            int divisor = 1;
+            divisor = 1;
             while (i / divisor > 9)
                 divisor *= 10;
             while (divisor > 0)
