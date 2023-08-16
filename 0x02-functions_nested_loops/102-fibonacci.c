@@ -9,7 +9,7 @@
 int main(void)
 {
 	int end = 50;
-	long int current = 2, previous = 1;
+	long int current = 2, previous = 1, next;
 	int i;
 
 	for (i = 0; i < end; i++)
@@ -23,7 +23,7 @@ int main(void)
 		{
 			printf("\n");
 		}
-		long int next = previous + current;
+		next = previous + current;
 
 		previous = current;
 		current = next;
