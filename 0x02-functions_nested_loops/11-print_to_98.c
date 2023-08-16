@@ -9,7 +9,7 @@
 void print_to_98(int n)
 {
     int i;
-    int abs_num, divisor; // Declare variables at the beginning
+    int abs_num, divisor;
 
     if (n <= 98)
     {
