@@ -11,12 +11,18 @@ void times_table(void)
 	{
 		for (j = 0; j < 10; j++)
 		{
-			times = i * j;
-			_putchar((times / 10) + '0');
-			_putchar((times % 10) + '0');
-			if (times < 81)
+			int times = i * j;
+			int first = times / 10 + '0';
+			int last = times % 10 + '0';
+			if ( first != last)
+			{
+				_putchar(first);
+				_putchar(last);
+			}
+			if (j < 9)
 			{
 				_putchar(',');
+				_putchar(' ');
 			}
 		}
 		_putchar('\n');
