@@ -9,12 +9,12 @@
 int main(void)
 {
 	int end = 50;
-	long long int current = 2, previous = 1;
+	long int current = 2, previous = 1;
 	int i;
 
 	for (i = 0; i < end; i++)
 	{
-		printf("%lld", previous);
+		printf("%ld", previous);
 		if (i < end - 1)
 		{
 			printf(", ");
@@ -23,7 +23,7 @@ int main(void)
 		{
 			printf("\n");
 		}
-		long long int next = previous + current;
+		long int next = previous + current;
 
 		previous = current;
 		current = next;
