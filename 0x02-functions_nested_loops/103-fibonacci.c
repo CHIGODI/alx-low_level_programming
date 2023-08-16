@@ -8,7 +8,7 @@
  */
 int main(void)
 {
-	long int prev = 1, curr = 2, next, sum = 0, i;
+	long int prev = 1, curr = 2, next, sum = 0;
 
 	while (prev < 400000)
 	{
