@@ -5,7 +5,7 @@
  */
 void times_table(void)
 {
-	int i, j, times;
+	int i, j;
 
 	for (i = 0; i < 10; i++)
 	{
@@ -14,6 +14,7 @@ void times_table(void)
 			int times = i * j;
 			int first = times / 10 + '0';
 			int last = times % 10 + '0';
+			
 			if ( first != last)
 			{
 				_putchar(first);
