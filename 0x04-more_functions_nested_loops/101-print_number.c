@@ -12,7 +12,7 @@ void print_number(int n)
 	{
 		int d = '-';
 
-		putchar(d);
+		_putchar(d);
 		n = -n;
 
 		int reversed = 0;
@@ -28,12 +28,12 @@ void print_number(int n)
 		{
 			int digit = reversed % 10;
 
-			putchar(digit + '0');
+			_putchar(digit + '0');
 			reversed /= 10;
 		}
 	}
 	else
 	{
-		putchar(n + '0');
+		_putchar(n + '0');
 	}
 }
