@@ -27,4 +27,5 @@ int main(void)
 			printf("Buzz");
 		}
 	}
+	return (0);
 }
