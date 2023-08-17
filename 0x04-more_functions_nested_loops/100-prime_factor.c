@@ -4,7 +4,7 @@
  * main - Entry point
  *
  * Description: Finds and prints the largest prime factor of a number.
- * 
+ *
  * Return: Always 0 (Success)
  */
 int main(void)
@@ -24,5 +24,5 @@ int main(void)
 		}
 	}
 	printf("%ld\n", largest_PrimeFactor);
-	return 0;
+	return (0);
 }
