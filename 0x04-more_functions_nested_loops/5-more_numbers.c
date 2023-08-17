@@ -12,17 +12,17 @@ void more_numbers(void)
 
 	for (times = 0; times <= 10; times++)
 	{
-		for (num = '0'; num <= '14'; num++)
+		for (num = 0; num <= 14; num++)
 		{
-			int tens = j / 10 + '0';
-			int ones = j % 10 + '0';
+			int tens = num / 10 + '0';
+			int ones = num % 10 + '0';
 
 			if (tens != '0')
 			{
 				_putchar(tens);
 			}
-			_putchar(num);
+			_putchar(ones);
 		}
+		_putchar('\n');
 	}
-	_putchar('\n');
 }
