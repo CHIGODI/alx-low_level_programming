@@ -9,8 +9,8 @@
  */
 int main(void)
 {
-	long long int num = 612852475143;
-	long long int largest_PrimeFactor = 2;
+	long int num = 612852475143;
+	long int largest_PrimeFactor = 2;
 
 	while (num > largest_PrimeFactor)
 	{
@@ -23,6 +23,6 @@ int main(void)
 			largest_PrimeFactor++;
 		}
 	}
-	printf("%lld\n", largest_PrimeFactor);
+	printf("%ld\n", largest_PrimeFactor);
 	return 0;
 }
