@@ -1,4 +1,4 @@
-#include "main.h"
+#include <stdio.h>
 /**
  * print_number - function that prints integer
  * @n: integer to be printed
@@ -6,36 +6,37 @@
  * Return: void
  *
  */
-int print_number(int n)
+void print_number(int n)
 {
-	int n = -1008;
-
 	if (n < 0)
 	{
-		int d = '-';
-
-		putchar(d);
+		_putchar('-');
 		n = -n;
+	}
 
-		int reversed = 0;
+	int reversed = 0;
+	int originalN = n;
 
-		while (n > 0)
-		{
-			int digit = n % 10;
+	while (n > 0)
+	{
+		int digit = n % 10;
 
-			reversed = reversed * 10 + digit;
-			n /= 10;
-		}
+		reversed = reversed * 10 + digit;
+		n /= 10;
+	}
+
+	if (originalN == 0)
+	{
+		_putchar('0');
+	}
+	else
+	{
 		while (reversed > 0)
 		{
 			int digit = reversed % 10;
 
-			putchar(digit + '0');
+			_putchar(digit + '0');
 			reversed /= 10;
 		}
-	}
-	else
-	{
-		putchar(n + '0');
 	}
 }
