@@ -14,8 +14,8 @@ void more_numbers(void)
 	{
 		for (num = 0; num <= 14; num++)
 		{
-			int tens = num / 10 + '0';
-			int ones = num % 10 + '0';
+			char tens = num / 10 + '0';
+			char ones = num % 10 + '0';
 
 			if (tens != '0')
 			{
