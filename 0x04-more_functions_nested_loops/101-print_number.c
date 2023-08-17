@@ -1,20 +1,23 @@
 #include "main.h"
+
 /**
  * print_number - function that prints integer
  * @n: integer to be printed
  *
  * Return: void
- *
  */
 void print_number(int n)
 {
 	int reversed = 0;
-	int originalN = n;
 
 	if (n < 0)
+	{
 		_putchar('-');
 		n = -n;
 	}
+
+	int originalN = n;
+
 	while (n > 0)
 	{
 		int digit = n % 10;
