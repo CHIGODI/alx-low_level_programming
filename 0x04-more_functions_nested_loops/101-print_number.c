@@ -9,6 +9,7 @@
 void print_number(int n)
 {
 	int reversed = 0;
+	int originalN;
 
 	if (n < 0)
 	{
@@ -16,7 +17,7 @@ void print_number(int n)
 		n = -n;
 	}
 
-	int originalN = n;
+	originalN = n;
 
 	while (n > 0)
 	{
