@@ -6,10 +6,8 @@
  * Return: void
  *
  */
-int print_number(int n)
+void print_number(int n)
 {
-	int n = -1008;
-
 	if (n < 0)
 	{
 		int d = '-';
