@@ -8,15 +8,13 @@
  */
 void print_number(int n)
 {
-	if (n < 0)
-	{
-		_putchar('-');
-		n = -n;
-	}
-
 	int reversed = 0;
 	int originalN = n;
 
+	if (n < 0)
+		_putchar('-');
+		n = -n;
+	}
 	while (n > 0)
 	{
 		int digit = n % 10;
