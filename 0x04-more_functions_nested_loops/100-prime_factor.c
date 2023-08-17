@@ -1,4 +1,4 @@
-nclude <stdio.h>
+#include <stdio.h>
 #include <math.h>
 /**
  * main - Entry point
