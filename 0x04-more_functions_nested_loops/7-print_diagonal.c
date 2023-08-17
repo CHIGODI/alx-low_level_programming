@@ -31,7 +31,7 @@ void print_diagonal(int n)
 			}
 			if (i != n - 1)
             		{
-                	putchar('\n');
+                	_putchar('\n');
             		}
 		}
 	}
