@@ -26,6 +26,10 @@ int main(void)
 		{
 			printf("Buzz");
 		}
+		else
+		{
+			printf(num);
+		}
 	}
 	return (0);
 }
