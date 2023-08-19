@@ -11,7 +11,7 @@ int main(void)
 	long int curr = 2, prev = 1, next, i;
 
 	printf("%d, %d, ", 1, 2);
-	for (i = 0; i < 98; i++)
+	for (i = 1; i < 98; i++)
 	{
 		next = curr + prev;
 		prev = curr;
