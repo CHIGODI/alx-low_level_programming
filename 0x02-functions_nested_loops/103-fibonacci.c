@@ -10,7 +10,7 @@ int main(void)
 {
 	long int prev = 1, curr = 2, next, sum = 0;
 
-	while (prev < 400000)
+	while (prev < 4000000)
 	{
 		next = curr + prev;
 		prev = curr;
