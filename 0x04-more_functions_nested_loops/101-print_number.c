@@ -8,37 +8,17 @@
  */
 void print_number(int n)
 {
-	int reversed = 0;
-	int originalN;
-
+	
 	if (n < 0)
 	{
 		_putchar('-');
 		n = -n;
+		print_number(n / 10 + '0');
+		putchar((n % 10) + '0');
 	}
-
-	originalN = n;
-
-	while (n > 0)
+	else if (n > 0)
 	{
-		int digit = n % 10;
-
-		reversed = reversed * 10 + digit;
-		n /= 10;
-	}
-
-	if (originalN == 0)
-	{
-		_putchar('0');
-	}
-	else
-	{
-		while (reversed > 0)
-		{
-			int digit = reversed % 10;
-
-			_putchar(digit + '0');
-			reversed /= 10;
-		}
+		print_number(n / 10 + '0');
+		putchar(n % 10 + '0');
 	}
 }
