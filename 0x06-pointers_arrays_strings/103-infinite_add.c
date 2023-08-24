@@ -82,7 +82,7 @@ char *infinite_add(char *n1, char *n2, char *r, int size_r)
     }
 
     r[index] = '\0';
-    reverse(r); // Assuming you have a working reverse function
+    reverse(r); 
 
     return r;
 }
