@@ -51,22 +51,15 @@ char *reverse(char *s)
  */
 char *infinite_add(char *n1, char *n2, char *r, int size_r)
 {
-    int position = 0;
     int res1 = myatoi(n1);
     int res2 = myatoi(n2);
     int sum = res1 + res2;
-    char digit;
-    char character;
+    int index = 0;
 
-    do
-    {
-        digit = sum % 10 + '0';
-        r[position] = digit;
-        position++;
+    while (sum > 0 && index < size_r - 1) {
+        int digit = sum % 10;
+        r[index++] = digit + '0';
         sum /= 10;
-    } while (sum > 0 && position < size_r - 1);
-
-    r[position] = '\0';
-    reverse(r);
-    return r;
+    }
+    r[index] = '\0';
 }
