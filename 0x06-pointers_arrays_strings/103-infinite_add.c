@@ -7,14 +7,14 @@
  */
 int myatoi(char *s)
 {
-    int i;
-    int res = 0;
+	int i;
+	int res = 0;
 
-    for (i = 0; s[i] != '\0'; i++)
-    {
-        res = res * 10 + (s[i] - '0');
-    }
-    return res;
+	for (i = 0; s[i] != '\0'; i++)
+	{
+		res = res * 10 + (s[i] - '0');
+	}
+	return (res);
 }
 
 /**
@@ -25,19 +25,19 @@ int myatoi(char *s)
  */
 char *reverse(char *s)
 {
-    int len = 0, i, temp;
+	int len = 0, i, temp;
 
-    for (i = 0; s[i] != '\0'; i++)
-    {
-        len++;
-    }
-    for (i = 0; i < len / 2; i++)
-    {
-        temp = s[i];
-        s[i] = s[len - 1 - i];
-        s[len - 1 - i] = temp;
-    }
-    return s;
+	for (i = 0; s[i] != '\0'; i++)
+	{
+		len++;
+	}
+	for (i = 0; i < len / 2; i++)
+	{
+		temp = s[i];
+		s[i] = s[len - 1 - i];
+		s[len - 1 - i] = temp;
+	}
+	return (s);
 }
 
 /**
@@ -73,7 +73,7 @@ char *infinite_add(char *n1, char *n2, char *r, int size_r)
 		r[index++] = (sum % 10) + '0';
 
 		if (index >= size_r - 1)
-			return 0;
+			return (0);
 
 		if (len1 >= 0)
 			len1--;
@@ -84,5 +84,5 @@ char *infinite_add(char *n1, char *n2, char *r, int size_r)
 	r[index] = '\0';
 	reverse(r);
 
-	return r;
+	return (r);
 }
