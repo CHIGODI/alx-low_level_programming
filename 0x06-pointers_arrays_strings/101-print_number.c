@@ -15,8 +15,8 @@ void print_number(int n)
 	}
 	if (n == INT_MIN)
 	{
-		_putchar('-');
 		n = INT_MAX;
+		_putchar('-');
 	}
 	else if (n < 0)
 	{
