@@ -8,7 +8,19 @@
  */
 void print_number(int n)
 {
-	if (n < 0)
+	int INT_MIN = -2147483648;
+	int INT_MAX = 2147483647;
+
+	if (n == 0)
+	{
+		_putchar('0');
+		return;
+	}
+	if (n == INT_MIN)
+	{
+		n = INT_MAX;
+	}
+	else if (n < 0)
 	{
 		_putchar('-');
 		n = -n;
