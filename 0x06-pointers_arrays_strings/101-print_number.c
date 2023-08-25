@@ -8,20 +8,17 @@
  */
 void print_number(int n)
 {
-	if (n == 0)
-	{
-		_putchar('0');
-		return;
-	}
 	if (n == INT_MIN)
 	{
-		n = INT_MAX;
-		_putchar('-');
+	_putchar('-');
+	print_number(INT_MAX / 10);
+	_putchar(INT_MAX % 10 + 1 + '0');
+	return;
 	}
 	else if (n < 0)
 	{
-		_putchar('-');
-		n = -n;
+	_putchar('-');
+	n = -n;
 	}
 	if (n >= 10)
 	{
