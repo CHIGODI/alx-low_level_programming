@@ -1,10 +1,6 @@
-Certainly! Here's a revised README with the topic exactly as mentioned in the provided information:
+# 0x07. C - Even more pointers, arrays, and strings
 
----
-
-# 0x07. C - Even more pointers, arrays and strings
-
-Welcome to the "0x07. C - Even more pointers, arrays and strings" repository. This repository contains solutions to a series of programming tasks that explore advanced concepts related to pointers, arrays, and strings in the C programming language.
+Welcome to the "0x07. C - Even more pointers, arrays, and strings" repository. This repository contains solutions to a series of programming tasks that explore advanced concepts related to pointers, arrays, and strings in the C programming language.
 
 ## Table of Contents
 
@@ -17,7 +13,7 @@ Welcome to the "0x07. C - Even more pointers, arrays and strings" repository. Th
 
 ## Project Description
 
-This repository hosts solutions to the tasks from the "0x07. C - Even more pointers, arrays and strings" project. Each task comes with a detailed description of the problem, and a corresponding solution implemented in C. The tasks cover a range of topics including memory manipulation, string handling, and more.
+This repository hosts solutions to the tasks from the "0x07. C - Even more pointers, arrays, and strings" project. Each task has a detailed description of the problem and a corresponding solution implemented in C. The tasks cover various topics including memory manipulation, string handling, etc.
 
 ## Learning Objectives
 
