@@ -7,14 +7,17 @@
  *
  * Return: 1 if character found, 0 otherwise.
  */
-int characterIsInAccept(char c, char *accept) {
-    while (*accept) {
-        if (*accept == c) {
-            return 1;
-        }
-        accept++;
-    }
-    return 0;
+int characterIsInAccept(char c, char *accept)
+{
+	while (*accept)
+	{
+		if (*accept == c)
+		{
+			return (1);
+		}
+		accept++;
+	}
+	return (0);
 }
 
 /**
@@ -24,17 +27,21 @@ int characterIsInAccept(char c, char *accept) {
  *
  * Return: Length of initial segment of s consisting only of accept bytes.
  */
-unsigned int _strspn(char *s, char *accept) {
-    unsigned int length = 0;
-    
-    while (*s) {
-        if (characterIsInAccept(*s, accept)) {
-            length++;
-        } else {
-            break;
-        }
-        s++;
-    }
+unsigned int _strspn(char *s, char *accept)
+{
+	unsigned int length = 0;
 
-    return length;
+	while (*s)
+	{
+		if (characterIsInAccept(*s, accept))
+		{
+			length++;
+		}
+		else
+		{
+			break;
+		}
+		s++;
+	}
+	return (length);
 }
