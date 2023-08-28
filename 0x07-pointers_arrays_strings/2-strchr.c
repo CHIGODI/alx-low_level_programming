@@ -5,12 +5,11 @@
  * @s: pointer to string to be used
  * @c: character match to be found
  *
- * Return: NULL if not found. pointer to first occurrence
+ * Return: NULL if not found. pointer to the first occurrence
  */
 char *_strchr(char *s, char c)
 {
 	int i;
-	char *ptr = 0;
 
 	for (i = 0; s[i] != '\0'; i++)
 	{
