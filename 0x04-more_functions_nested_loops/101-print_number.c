@@ -12,17 +12,13 @@ void print_number(int n)
 	{
 	_putchar('-');
 	print_number(INT_MAX / 10);
-	_putchar('8');
+	_putchar(INT_MAX % 10 + 1 + '0');
 	return;
-	}
-	else if (n == 0)
-	{
-		_putchar('0');
 	}
 	else if (n < 0)
 	{
-		_putchar('-');
-		n = -n;
+	_putchar('-');
+	n = -n;
 	}
 	if (n >= 10)
 	{
