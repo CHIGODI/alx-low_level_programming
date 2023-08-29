@@ -4,34 +4,26 @@
 
 #define PASSWORD_LENGTH 6
 
-/**
- * generateRandomCharacter - Generates a random uppercase letter.
- *
- * Return: A random uppercase letter.
- */
 char generateRandomCharacter(void)
 {
-    return 'A' + (rand() % 26);
+    return 'A' + (rand() % 8);
 }
 
-/**
- * main - Entry point of the program.
- *
- * Return: Always 0.
- */
 int main(void)
 {
     char password[PASSWORD_LENGTH + 1];
     int i;
 
-    srand(time(NULL)); /* Seed the random number generator */
+    srand(time(NULL));
 
-    for (i = 0; i < PASSWORD_LENGTH; i++)
-    {
+    password[0] = generateRandomCharacter();
+    password[1] = '-';
+    password[2] = '@';
+
+    for (i = 3; i < PASSWORD_LENGTH; i++)
         password[i] = generateRandomCharacter();
-    }
 
-    password[PASSWORD_LENGTH] = '\0'; /* Null-terminate the password string */
+    password[PASSWORD_LENGTH] = '\0';
 
     printf("Generated password: %s\n", password);
 
