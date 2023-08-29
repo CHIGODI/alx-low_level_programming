@@ -6,7 +6,7 @@
 
 char generateRandomCharacter(void)
 {
-    return 'A' + (rand() % 8);
+    return 'A' + (rand() % 9);
 }
 
 int main(void)
