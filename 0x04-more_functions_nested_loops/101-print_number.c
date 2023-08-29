@@ -12,7 +12,7 @@ void print_number(int n)
 	{
 	_putchar('-');
 	print_number(INT_MAX / 10);
-	_putchar('8');
+	_putchar(INT_MAX % 10 + 1 + '0');
 	return;
 	}
 	else if (n == 0)
