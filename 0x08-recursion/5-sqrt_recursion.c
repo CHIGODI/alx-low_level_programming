@@ -1,4 +1,23 @@
 #include "main.h"
+/**
+ * _sqrt - helper function to find sqrt
+ * @n: number
+ * @i: first guess
+ *
+ * Return: sqrt
+ */
+int _sqrt(int n, int i)
+{
+	if (i * i == n)
+	{
+		return (i);
+	}
+	else if (i * i > n)
+	{
+		return (-1);
+	}
+	return (_sqrt(n, i + 1));
+}
 
 /**
  * _sqrt_recursion - a function that returns the natural squareroot of a number
@@ -8,21 +27,10 @@
  */
 int _sqrt_recursion(int n)
 {
-	int i = 1;
-
-	for (; i * i < n; i++);
-
 	if (n < 0)
 	{
 		return (-1);
 	}
 
-	if (i * i == n)
-	{
-		return (i);
-	}
-	else
-	{
-		return (-1);
-	}
+	return (_sqrt(n, 1));
 }
