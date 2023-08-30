@@ -1,7 +1,8 @@
 #include "main.h"
+#include <string.h>
 /**
  * check_palindrome - helper function to check recursion
- * @s: begining of string
+ * @s: beginning of string
  * @end: end of string
  *
  * Return: 1 if true 0 otherwise
@@ -17,10 +18,10 @@ int check_palindrome(char *s, char *end)
 	{
 		return (0);
 	}
-	return (check_palindrome(s+1, end-1));
+	return (check_palindrome(s + 1, end - 1));
 }
 /**
- * is_palindrome -a function to check if palydrome of not
+ * is_palindrome -a function to check if palindrome of not
  * @s: string to be checked
  *
  * Return: 1 if true 0 otherwise
