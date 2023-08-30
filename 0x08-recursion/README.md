@@ -15,7 +15,6 @@
   - [Task 6: Checking Prime Numbers with Recursion](#task-6-checking-prime-numbers-with-recursion)
   - [Task 7: Checking Palindrome Strings](#task-7-checking-palindrome-strings)
   - [Task 8: Comparing Strings with Wildcards](#task-8-comparing-strings-with-wildcards)
-- [License](#license)
 
 ## Description
 
