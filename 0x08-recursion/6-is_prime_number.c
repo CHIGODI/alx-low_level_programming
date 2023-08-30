@@ -1,21 +1,5 @@
 #include "main.h"
 /**
- * _sqrt - helper function to find sqrt
- * @n: number
- *
- * Return: sqrt
- */
-int _sqrt(int n)
-{
-	int i;
-
-	for (i = 1; i * i < n; i++)
-		;
-
-	return (i);
-}
-
-/**
  * find_prime - helper function to find prime number
  * @n: number to check
  * @i: used to check if n is divisible
@@ -45,7 +29,7 @@ int find_prime(int n, int i)
  */
 int is_prime_number(int n)
 {
-	int q = _sqrt(n);
+	int q = n / 2;
 
 	if (n <= 1)
 	{
