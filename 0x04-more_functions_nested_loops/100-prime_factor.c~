@@ -1,0 +1,32 @@
+nclude <stdio.h>
+#include <math.h>
+
+/**
+ *  * main - Entry point
+ *   *
+ *    * Description: Finds and prints the largest prime factor of a number.
+ *     *
+ *      * Return: Always 0 (Success)
+ *       */
+int main(void)
+{
+	    long long int num = 612852475143;
+	        long long int largestPrimeFactor = 2;
+
+		    while (num > largestPrimeFactor)
+			        {
+					        if (num % largestPrimeFactor == 0)
+							        {
+									            num /= largestPrimeFactor;
+										            }
+						        else
+								        {
+										            largestPrimeFactor++;
+											            }
+							    }
+
+		        printf("%lld\n", largestPrimeFactor);
+
+			    return 0;
+}
+	
