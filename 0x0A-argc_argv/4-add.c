@@ -23,7 +23,7 @@ int main(int argc, char *argv[])
 		for (i = 1; i < argc; i++)
 		{
 			num = atoi(argv[i]);
-			if (num > UINT_MAX)
+			if (num == 0 && argv[i][0] != '0')
 			{
 				printf("Error\n");
 				return (1);
@@ -32,5 +32,5 @@ int main(int argc, char *argv[])
 		}
 		printf("%d\n", sum);
 	}
-	return (1);
+	return (0);
 }
