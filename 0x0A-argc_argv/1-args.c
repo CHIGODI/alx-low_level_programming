@@ -8,7 +8,7 @@
  *
  * Return: 0 success
  */
-int main(char* argv[])
+int main(int argc, char* argv[])
 {
 	int i, len = 0;
 
