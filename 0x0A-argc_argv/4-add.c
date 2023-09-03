@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #include <limits.h>
 /**
- * main - entry point of program
+ * main - entry point of the program
  * @argc: argument count
  * @argv: argument vector
  *
@@ -22,12 +22,12 @@ int main(int argc, char *argv[])
 	{
 		for (i = 1; i < argc; i++)
 		{
-			num = atoi(argv[i]);
-			if (num == 0 && argv[i][0] != '0')
+			if (argv[i] >= 'a' && argv[i]!= 'z')
 			{
 				printf("Error\n");
 				return (1);
 			}
+			num = atoi(argv[i]);
 			sum += num;
 		}
 		printf("%d\n", sum);
