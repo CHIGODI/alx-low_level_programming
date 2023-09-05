@@ -7,7 +7,7 @@
  * @s1: first string
  * @s2: second string
  *
- * Return: pointer to newly allocated space  NULL if failure .
+ * Return: pointer to newly allocated space  NULL if failure.
  */
 char *str_concat(char *s1, char *s2)
 {
@@ -20,7 +20,7 @@ char *str_concat(char *s1, char *s2)
 	if (s2 == NULL)
 		s2 = "";
 
-	ptr = (char *)malloc(len1 + len2);
+	ptr = (char *)malloc(len1 + len2 + 1);
 
 	if (ptr == NULL)
 	{
