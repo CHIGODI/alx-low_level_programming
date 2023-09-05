@@ -8,7 +8,7 @@
  * @c: character initiliazedto array
  * @size: the size
  *
- * Return: ptr 
+ * Return: ptr
  */
 char *create_array(unsigned int size, char c)
 {
