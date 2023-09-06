@@ -1,4 +1,13 @@
-int main(int argc, char *argv[])
+#include "main.h"
+#include <stdlib.h>
+#include <string.h>
+/**
+ * main - entry point of the program
+ * @argc: argument count
+ * @argv: argument vector
+ *
+ * Return: 0 success
+ */int main(int argc, char *argv[])
 {
         int change;
         int coins [] = {25, 10, 5, 2, 1};
@@ -32,4 +41,4 @@ int main(int argc, char *argv[])
         }
         printf("%d\n", coin_count);
         return (0);
-} 
+}
