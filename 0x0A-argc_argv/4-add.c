@@ -10,27 +10,31 @@
  */
 int main(int argc, char *argv[])
 {
-	int i;
-	unsigned int sum = 0, num;
+        int sum = 0;
+        int i, n, j;
 
-	if (argc < 3)
-	{
-		printf("0\n");
-		return (1);
-	}
-	else if (argc >= 3)
-	{
-		for (i = 1; i < argc; i++)
-		{
-			if (argv[i] >= 'a' && argv[i]!= 'z')
-			{
-				printf("Error\n");
-				return (1);
-			}
-			num = atoi(argv[i]);
-			sum += num;
-		}
-		printf("%d\n", sum);
-	}
-	return (0);
-}
+        if (argc < 2)
+        {
+                printf("0\n");
+        }
+        else
+        {
+                for (i = 1; i < argc; i++)
+                {
+                        for (j = 0; argv[i][j] != '\0'; j++)
+                        {
+                                if (!(argv[i][j] >= '0' && argv[i][j] <= '9'))
+                                {
+                                        printf("Error\n");
+                                        return (1);
+                                }
+                                /* takes care of positive numbers */
+                                n = atoi(argv[i]);
+                        }
+
+                        sum += n;
+                }
+                printf("%d\n", sum);
+        }
+                return (0);
+} 
