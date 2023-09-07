@@ -84,8 +84,8 @@ char *_strncat(char *dest, char *src, int n)
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
 	char *concat = NULL;
-	unsigned int len1 = (s1 != NULL) ? strlen(s1) : 0;
-	unsigned int len1 = (s2 != NULL) ? strlen(s2) : 0;
+	unsigned int len1 = (s1 != NULL) ? _strlen(s1) : 0;
+	unsigned int len1 = (s2 != NULL) ? _strlen(s2) : 0;
 
 	if (s1 == NULL)
 		s1 = "";
