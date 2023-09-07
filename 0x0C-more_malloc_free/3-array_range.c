@@ -14,17 +14,21 @@ int *array_range(int min, int max)
 	int count = 0;
 
 	if (min > max)
-		return (NULL);
-
-	count = max - min + 1;
-
-	array_mem = malloc(count * sizeof(int));
-
-	if (array_mem == NULL)
-		return (NULL);
-	for (i = min; i <= max; i++)
 	{
-		array_mem[i] = i;
+		return (NULL);
 	}
-	return (array_mem);
+	else
+	{
+		count = max - min + 1;
+		array_mem = malloc(count * sizeof(int));
+		if (array_mem == NULL)
+		{
+		return (NULL);
+		}
+		for (i = min; i <= max; i++)
+		{
+			array_mem[i] = i;
+		}
+		return (array_mem);
+	}
 }
