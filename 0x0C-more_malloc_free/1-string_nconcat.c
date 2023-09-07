@@ -96,7 +96,7 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	if (n >= len2)
 		n = len2;
 
-	concat = malloc(len1 + n + 1);
+	concat = malloc(len1 + n);
 
 	if (concat == NULL)
 	{
