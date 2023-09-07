@@ -20,7 +20,7 @@ void *_memcpy(void *dest, const void *src, size_t n)
 		d[i] = s[i];
 	}
 
-	return dest;
+	return (dest);
 }
 /**
  * _realloc - a function that reallocates a memory block using malloc and free
