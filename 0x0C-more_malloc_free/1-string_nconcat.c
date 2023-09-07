@@ -84,14 +84,16 @@ char *_strncat(char *dest, char *src, int n)
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
 	char *concat = NULL;
-	unsigned int len1 = (s1 != NULL) ? _strlen(s1) : 0;
-	unsigned int len2 = (s2 != NULL) ? _strlen(s2) : 0;
+	unsigned int len1 = 0;
+	unsigned int len2 = 0;
 
 	if (s1 == NULL)
 		s1 = "";
 
 	if (s2 == NULL)
 		s2 = "";
+	len1 = _strlen(s1);
+	len2 = _strlen(s2);
 
 	if (n >= len2)
 		n = len2;
