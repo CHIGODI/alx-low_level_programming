@@ -12,8 +12,9 @@ void *_memcpy(void *dest, const void *src, unsigned int n)
 {
     char *s = (char *)src;
     char *d = (char *)dest;
+    unsigned int
 
-    for (unsigned int i = 0; i < n; i++)
+    for (i = 0; i < n; i++)
     {
         d[i] = s[i];
     }
