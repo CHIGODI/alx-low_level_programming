@@ -12,8 +12,8 @@
 void *_memcpy(void *dest, const void *src, size_t n)
 {
 	size_t i = 0;
-	char *s = src;
-	char *d = dest;
+	char *s = (char *)src;
+	char *d = 9char *)dest;
 
 	while (i < n)
 	{
