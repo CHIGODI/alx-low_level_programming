@@ -28,14 +28,19 @@ char *_memset(char *s, char b, unsigned int n)
  */
 void *_calloc(unsigned int nmemb, unsigned int size)
 {
-	unsigned int size_t = nmemb * size;
-	char *memory = malloc(size_t);
+	unsigned int size_t = 0;
+	char *memory = NULL;
 	
+	if (nmemb == 0 || size ==0)
+	{
+		return (NULL);
+	}
+	size_t = nmemb * size;
+	memory = malloc(size_t);
 	if (memory == NULL)
 	{
 		return (NULL);
 	}
-
 	_memset(memory, 0, size_t);
 	return (memory);
 }
