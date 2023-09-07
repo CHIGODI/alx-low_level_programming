@@ -10,16 +10,16 @@
  */
 void *_memcpy(void *dest, const void *src, unsigned int n)
 {
-    char *s = (char *)src;
-    char *d = (char *)dest;
-    unsigned int i;
+	char *s = (char *)src;
+	char *d = (char *)dest;
+	unsigned int i;
 
-    for (i = 0; i < n; i++)
-    {
-        d[i] = s[i];
-    }
+	for (i = 0; i < n; i++)
+	{
+		d[i] = s[i];
+	}
 
-    return dest;
+	return (dest);
 }
 
 /**
@@ -32,39 +32,41 @@ void *_memcpy(void *dest, const void *src, unsigned int n)
  */
 void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size)
 {
-    if (new_size == 0)
-    {
-        free(ptr);
-        return NULL;
-    }
-    else if (ptr == NULL)
-    {
-        return malloc(new_size);
-    }
-    else if (new_size == old_size)
-    {
-        return ptr;
-    }
-    else if (new_size < old_size)
-    {
-        void *new_ptr = malloc(new_size);
-        if (new_ptr == NULL)
-        {
-            return NULL;
-        }
-        _memcpy(new_ptr, ptr, new_size);
-        free(ptr);
-        return new_ptr;
-    }
-    else
-    {
-        void *new_ptr = malloc(new_size);
-        if (new_ptr == NULL)
-        {
-            return NULL;
-        }
-        _memcpy(new_ptr, ptr, old_size);
-        free(ptr);
-        return new_ptr;
-    }
+	if (new_size == 0)
+	{
+		free(ptr);
+		return (NULL);
+	}
+	else if (ptr == NULL)
+	{
+		return (malloc(new_size));
+	}
+	else if (new_size == old_size)
+	{
+		return (ptr);
+	}
+	else if (new_size < old_size)
+	{
+		void *new_ptr = malloc(new_size);
+
+		if (new_ptr == NULL)
+		{
+			return (NULL);
+		}
+		_memcpy(new_ptr, ptr, new_size);
+		free(ptr);
+		return (new_ptr);
+	}
+	else
+	{
+		void *new_ptr = malloc(new_size);
+
+		if (new_ptr == NULL)
+		{
+			return (NULL);
+		}
+		_memcpy(new_ptr, ptr, old_size);
+		free(ptr);
+		return (new_ptr);
+	}
 }
