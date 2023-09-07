@@ -1,6 +1,6 @@
 #include <stdlib.h>
 #include "main.h"
-
+#include <stddef.h>
 /**
  * _memcpy - a function that copies memory data
  * @dest: destination to copy to
@@ -9,9 +9,9 @@
  *
  *  Return: dest
  */
-void *_memcpy(void *dest, const void *src, unsigned int n)
+void *_memcpy(void *dest, const void *src, size_t n)
 {
-	unsigned int i = 0;
+	size_t i = 0;
 	char *s = src;
 	char *d = dest;
 
