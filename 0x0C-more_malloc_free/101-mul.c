@@ -9,13 +9,13 @@
  */
 int is_digit(char *str)
 {
-    while (*str)
-    {
-        if (*str < '0' || *str > '9')
-            return 0;
-        str++;
-    }
-    return 1;
+	while (*str)
+	{
+		if (*str < '0' || *str > '9')
+			return (0);
+		str++;
+	}
+	return (1);
 }
 
 /**
@@ -24,9 +24,9 @@ int is_digit(char *str)
  */
 void print_number(unsigned long long n)
 {
-    if (n >= 10)
-        print_number(n / 10);
-    putchar((n % 10) + '0');
+	if (n >= 10)
+		print_number(n / 10);
+	putchar((n % 10) + '0');
 }
 
 /**
@@ -38,29 +38,29 @@ void print_number(unsigned long long n)
  */
 int main(int argc, char *argv[])
 {
-    char *num1, *num2;
-    unsigned long long int result;
+	char *num1, *num2;
+	unsigned long long result;
 
-    if (argc != 3)
-    {
-        for (int i = 0; "Error\n"[i]; i++)
-            putchar("Error\n"[i]);
-        return (98);
-    }
+	if (argc != 3)
+	{
+		for (int i = 0; i < 6; i++)
+			putchar("Error\n"[i]);
+		return (98);
+	}
 
-    num1 = argv[1];
-    num2 = argv[2];
+	num1 = argv[1];
+	num2 = argv[2];
 
-    if (!is_digit(num1) || !is_digit(num2))
-    {
-        for (int i = 0; "Error\n"[i]; i++)
-            putchar("Error\n"[i]);
-        return (98);
-    }
+	if (!is_digit(num1) || !is_digit(num2))
+	{
+		for (int i = 0; i < 6; i++)
+			putchar("Error\n"[i]);
+		return (98);
+	}
 
-    result = strtoull(num1, NULL, 10) * strtoull(num2, NULL, 10);
-    print_number(result);
-    putchar('\n');
+	result = strtoull(num1, NULL, 10) * strtoull(num2, NULL, 10);
+	print_number(result);
+	putchar('\n');
 
-    return (0);
+	return (0);
 }
