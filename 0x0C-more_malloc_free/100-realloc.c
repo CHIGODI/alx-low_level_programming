@@ -11,16 +11,16 @@
  */
 void *_memcpy(void *dest, const void *src, size_t n)
 {
-	size_t i = 0;
+	size_t i;
 	char *s = (char *)src;
 	char *d = (char *)dest;
 
-	while (i < n)
+	for (i = 0; i < n; i++)
 	{
-		dest[i] = src[i];
-			i++;
+		d[i] = s[i];
 	}
-	return (dest);
+
+	return dest;
 }
 /**
  * _realloc - a function that reallocates a memory block using malloc and free
