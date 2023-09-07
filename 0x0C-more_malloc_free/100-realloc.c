@@ -13,7 +13,7 @@ void *_memcpy(void *dest, const void *src, size_t n)
 {
 	size_t i = 0;
 	char *s = (char *)src;
-	char *d = 9char *)dest;
+	char *d = (char *)dest;
 
 	while (i < n)
 	{
