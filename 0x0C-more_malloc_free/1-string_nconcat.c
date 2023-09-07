@@ -104,9 +104,11 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	{
 		return (NULL);
 	}
-
-	_strcpy(concat, s1);
-	_strncat(concat, s2, n);
-
-	return (concat);
+	else
+	{
+		_strcpy(concat, s1);
+		_strncat(concat, s2, n);
+		return (concat);
+	}
+	return (NULL);
 }
