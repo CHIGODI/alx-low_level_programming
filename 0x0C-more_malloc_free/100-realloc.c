@@ -2,7 +2,7 @@
 #include "main.h"
 
 /**
- * _memcpy - a fuction that copies memory data
+ * _memcpy - a function that copies memory data
  * @dest: destination to copy to
  * @src: source string
  * @n: size
@@ -44,8 +44,7 @@ void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size)
 		{
 			return (NULL);
 		}
-		_memcpy(new_pointer, ptr, new_size);
-		free(ptr);
+		return (new_pointer);
 	}
 	if (new_size <= old_size)
 	{
