@@ -13,8 +13,9 @@ void *_memcpy(void *dest, const void *src, size_t n)
 {
 	char *s = (char *)src;
 	char *d = (char *)dest;
+	size_t i;
 
-	for (size_t i = 0; i < n; i++)
+	for (i = 0; i < n; i++)
 	{
 		d[i] = s[i];
 	}
@@ -29,7 +30,7 @@ void *_memcpy(void *dest, const void *src, size_t n)
  *
  * Return: pointer to reallocated memory
  */
-void *_realloc(void *ptr, size_t old_size, size_t new_size)
+void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size)
 {
 	void *new_pointer;
 
