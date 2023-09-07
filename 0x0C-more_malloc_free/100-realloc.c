@@ -1,21 +1,20 @@
 #include <stdlib.h>
 #include "main.h"
-#include <stddef.h>
+
 /**
  * _memcpy - a function that copies memory data
  * @dest: destination to copy to
  * @src: source string
  * @n: size
  *
- *  Return: dest
+ * Return: dest
  */
 void *_memcpy(void *dest, const void *src, size_t n)
 {
-	size_t i;
 	char *s = (char *)src;
 	char *d = (char *)dest;
 
-	for (i = 0; i < n; i++)
+	for (size_t i = 0; i < n; i++)
 	{
 		d[i] = s[i];
 	}
@@ -24,55 +23,45 @@ void *_memcpy(void *dest, const void *src, size_t n)
 }
 /**
  * _realloc - a function that reallocates a memory block using malloc and free
- * @ptr:is a pointer to the memory previously allocated with a call to malloc
- * @old_size: is the size, in bytes, of the allocated space for ptr
- * @new_size:is the new size, in bytes of the new memory block
+ * @ptr: pointer to the memory previously allocated with malloc
+ * @old_size: size of the allocated space for ptr
+ * @new_size: new size of the memory block
  *
- * Return: pointer to reallocate memory
+ * Return: pointer to reallocated memory
  */
-void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size)
+void *_realloc(void *ptr, size_t old_size, size_t new_size)
 {
-	void *new_pointer = NULL;
+	void *new_pointer;
 
 	if (new_size == 0)
 	{
 		free(ptr);
 		return (NULL);
 	}
-	else if (ptr == NULL)
+
+	if (ptr == NULL)
 	{
-		new_pointer = malloc(new_size);
-		if (new_pointer == NULL)
-		{
-			return (NULL);
-		}
-		return (new_pointer);
+		return (malloc(new_size));
 	}
-	else if (new_size == old_size)
+
+	new_pointer = malloc(new_size);
+
+	if (new_pointer == NULL)
 	{
-		return (ptr);
+		return (NULL);
 	}
-	else if (new_size < old_size)
+
+	if (new_size <= old_size)
 	{
-		new_pointer = malloc(new_size);
-		if (new_pointer == NULL)
-		{
-			return (NULL);
-		}
 		_memcpy(new_pointer, ptr, new_size);
-		free(ptr);
-		return (new_pointer);
 	}
 	else
 	{
-		new_pointer = malloc(new_size);
-		if (new_pointer == NULL)
-		{
-			return (NULL);
-		}
 		_memcpy(new_pointer, ptr, old_size);
-		free(ptr);
-		return (new_pointer);
 	}
-	return (NULL);
+
+	free(ptr);
+	if (new_pointer == NULL)
+		return (NULL);
+	return (new_pointer);
 }
