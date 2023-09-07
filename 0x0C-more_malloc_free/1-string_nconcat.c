@@ -77,7 +77,7 @@ char *_strncat(char *dest, char *src, int n)
  * string_nconcat - a function that concatenates two strings.
  * @s1: destination string
  * @s2: Source string
- * @n: number of charactersto be concatenated
+ * @n: number of characters to be concatenated
  *
  * Return: pointer to string
  */
@@ -85,7 +85,7 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
 	char *concat = NULL;
 	unsigned int len1 = (s1 != NULL) ? _strlen(s1) : 0;
-	unsigned int len1 = (s2 != NULL) ? _strlen(s2) : 0;
+	unsigned int len2 = (s2 != NULL) ? _strlen(s2) : 0;
 
 	if (s1 == NULL)
 		s1 = "";
