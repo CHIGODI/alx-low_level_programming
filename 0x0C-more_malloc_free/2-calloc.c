@@ -30,8 +30,7 @@ void *_calloc(unsigned int nmemb, unsigned int size)
 {
 	unsigned int size_t = nmemb * size;
 	char *memory = malloc(size_t);
-	unsigned int i = 0;
-
+	
 	if (memory == NULL)
 	{
 		return (NULL);
