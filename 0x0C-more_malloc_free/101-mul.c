@@ -19,6 +19,17 @@ int is_digit(char *str)
 }
 
 /**
+ * print_number - Prints an unsigned long long integer.
+ * @n: The number to print.
+ */
+void print_number(unsigned long long n)
+{
+    if (n >= 10)
+        print_number(n / 10);
+    putchar((n % 10) + '0');
+}
+
+/**
  * main - Entry point of the program.
  * @argc: The number of command-line arguments.
  * @argv: An array of strings containing the command-line arguments.
@@ -27,23 +38,29 @@ int is_digit(char *str)
  */
 int main(int argc, char *argv[])
 {
+    char *num1, *num2;
+    unsigned long long int result;
+
     if (argc != 3)
     {
-        printf("Error\n");
+        for (int i = 0; "Error\n"[i]; i++)
+            putchar("Error\n"[i]);
         return (98);
     }
 
-    char *num1 = argv[1];
-    char *num2 = argv[2];
+    num1 = argv[1];
+    num2 = argv[2];
 
     if (!is_digit(num1) || !is_digit(num2))
     {
-        printf("Error\n");
+        for (int i = 0; "Error\n"[i]; i++)
+            putchar("Error\n"[i]);
         return (98);
     }
 
-    unsigned long long int result = strtoull(num1, NULL, 10) * strtoull(num2, NULL, 10);
-    printf("%llu\n", result);
+    result = strtoull(num1, NULL, 10) * strtoull(num2, NULL, 10);
+    print_number(result);
+    putchar('\n');
 
     return (0);
 }
