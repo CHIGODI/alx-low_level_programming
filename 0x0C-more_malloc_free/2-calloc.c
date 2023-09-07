@@ -9,7 +9,7 @@
  */
 void *_calloc(unsigned int nmemb, unsigned int size)
 {
-	unsigned int *memory = calloc(nmemb * size);
+	unsigned int *memory = calloc(nmemb , size);
 	unsigned int i;
 
 	if (memory == NULL)
