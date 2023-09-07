@@ -9,11 +9,17 @@
  */
 void *_calloc(unsigned int nmemb, unsigned int size)
 {
-	unsigned int *memory = calloc(nmemb , size);
-	unsigned int i;
+	unsigned int *memory = malloc(nmemb * size);
+	unsigned int i = 0;
 
 	if (memory == NULL)
+	{
 		return (NULL);
-
+	}
+	while (i < nmemb)
+	{
+		memory[i] = 0;
+		i++;
+	}
 	return (memory);
 }
