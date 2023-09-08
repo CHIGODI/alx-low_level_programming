@@ -1,6 +1,6 @@
 #include "main.h"
 #include <stdlib.h>
-
+#include <stdio.h>
 /**
  * _strcpy - Copies a string pointed to by @src, including the
  *           terminating null byte, to a buffer pointed to by @dest.
@@ -54,6 +54,7 @@ int _strlen(char *s)
 char *_strncat(char *dest, char *src, int n)
 {
 	int len1 = _strlen(dest), len2 = _strlen(src), i;
+
 	for (i = 0; i < n; i++)
 	{
 		dest[len1 + i] = src[i];
@@ -85,9 +86,9 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	len2 = _strlen(s2);
 
 	if (n >= len2)
-		concat = malloc(sizeof(char) * len1 + len2 + 1);
+		concat = malloc(sizeof(char) * (len1 + len2 + 1));
 	else
-		concat = malloc(sizeof(char) * len1 + n + 1);
+		concat = malloc(sizeof(char) * (len1 + n + 1));
 
 	if (concat == NULL)
 	{
@@ -97,7 +98,6 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	{
 		_strcpy(concat, s1);
 		_strncat(concat, s2, n);
-		return (concat);
 	}
-	return (NULL);
+	return (concat);
 }
