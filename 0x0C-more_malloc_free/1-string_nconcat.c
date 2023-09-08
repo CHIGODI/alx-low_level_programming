@@ -53,13 +53,13 @@ int _strlen(char *s)
  */
 char *_strncat(char *dest, char *src, int n)
 {
-	int len1 = _strlen(dest), len2 = _strlen(src), i;
+	int len1 = _strlen(dest), i;
 
 	for (i = 0; i < n; i++)
 	{
 		dest[len1 + i] = src[i];
 	}
-	dest[len1 + len2] = '\0';
+	dest[len1 + n] = '\0';
 	return (dest);
 }
 
