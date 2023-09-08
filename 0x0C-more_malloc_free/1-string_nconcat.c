@@ -6,11 +6,11 @@
  */
 unsigned int str_len(char *str)
 {
-        unsigned int i;
+	unsigned int i;
 
-        for (i = 0; str[i] != '\0'; i++)
-                ;
-        return (i);
+	for (i = 0; str[i] != '\0'; i++)
+		;
+	return (i);
 }
 /**
  * string_nconcat - concatenates strings
@@ -21,39 +21,39 @@ unsigned int str_len(char *str)
  */
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
-        char *s = NULL;
-        unsigned int i, j, s1_len = 0;
+	char *s = NULL;
+	unsigned int i, j, s1_len = 0;
 
-        if (s1 == NULL)
-                s1 = "";
-        if (s2 == NULL)
-                s2 = "";
+	if (s1 == NULL)
+		s1 = "";
+	if (s2 == NULL)
+		s2 = "";
 
-        s1_len = str_len(s1);
+	s1_len = str_len(s1);
 
-        if (n >= str_len(s2))
-        {
-                n = str_len(s2);
-        }
-                           /* reserve memory for concatenated string */
-        s = malloc((s1_len + n + 1) * sizeof(char));
+	if (n >= str_len(s2))
+	{
+		n = str_len(s2);
+	}
 
-        if (s == NULL)
-                return (NULL);
-        /* copy s1 */
-        for (i = 0; s1[i] != '\0'; i++)
-        {
-                s[i] = s1[i];
-        }
+	s = malloc((s1_len + n + 1) * sizeof(char));
 
-        /* concatenate  */
-        for (j = 0; j < n; j++)
-        {
-                s[i] = s2[j];
-                i++;
-        }
+	if (s == NULL)
+		return (NULL);
 
-        /* add null terminator */
-        s[i] = '\0';
-        return (s);
-} 
+	for (i = 0; s1[i] != '\0'; i++)
+	{
+		s[i] = s1[i];
+	}
+
+
+	for (j = 0; j < n; j++)
+	{
+		s[i] = s2[j];
+		i++;
+	}
+
+
+	s[i] = '\0';
+	return (s);
+}
