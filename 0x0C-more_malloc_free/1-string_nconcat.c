@@ -1,100 +1,59 @@
 #include "main.h"
-#include <stdlib.h>
-#include <stdio.h>
 /**
- * _strcpy - Copies a string pointed to by @src, including the
- *           terminating null byte, to a buffer pointed to by @dest.
- * @dest: A buffer to copy the string to.
- * @src: The source string to copy.
- *
- * Return: A pointer to the destination string @dest.
+ * str_len - get length of the string
+ * @str: pointer to string
+ * Return: return length
  */
-char *_strcpy(char *dest, const char *src)
+unsigned int str_len(char *str)
 {
-	int index = 0;
+        unsigned int i;
 
-	while (src[index])
-	{
-		dest[index] = src[index];
-		index++;
-	}
-
-	return (dest);
+        for (i = 0; str[i] != '\0'; i++)
+                ;
+        return (i);
 }
-
 /**
- * _strlen -a function that returns length of a string
- * @s: string to be used
- *
- * Return: length of string.
- *
- */
-int _strlen(char *s)
-{
-	int len = 0, i;
-
-	for (i = 0; s[i] != '\0'; i++)
-	{
-		len++;
-	}
-	return (len);
-}
-
-
-/**
- * _strncat- a function that concatenates two strings.
- *           it will use at most n bytes from src
- * @dest: destination string
- * @src: source string
- * @n: bytes to be concatenated from src
- *
- * Return: dest
- *
- */
-char *_strncat(char *dest, char *src, int n)
-{
-	int len1 = _strlen(dest), i;
-
-	for (i = 0; i < n; i++)
-	{
-		dest[len1 + i] = src[i];
-	}
-	dest[len1 + n] = '\0';
-	return (dest);
-}
-
-/**
- * string_nconcat - a function that concatenates two strings.
- * @s1: destination string
- * @s2: Source string
- * @n: number of characters to be concatenated
- *
- * Return: pointer to string
+ * string_nconcat - concatenates strings
+ * @s1: string 1
+ * @s2: string 2
+ * @n: number of bytes of s2
+ * Return: pointer to concatenated string
  */
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
-	char *concat = NULL;
-	unsigned int len1 = 0;
-	unsigned int len2 = 0;
+        char *s = NULL;
+        unsigned int i, j, s1_len = 0;
 
-	if (s1 == NULL)
-		s1 = "";
+        if (s1 == NULL)
+                s1 = "";
+        if (s2 == NULL)
+                s2 = "";
 
-	if (s2 == NULL)
-		s2 = "";
-	len1 = _strlen(s1);
-	len2 = _strlen(s2);
+        s1_len = str_len(s1);
 
-	if (n >= len2)
-		concat = malloc(sizeof(char) * (len1 + len2 + 1));
-	else
-		concat = malloc(sizeof(char) * (len1 + n + 1));
+        if (n >= str_len(s2))
+        {
+                n = str_len(s2);
+        }
+                           /* reserve memory for concatenated string */
+        s = malloc((s1_len + n + 1) * sizeof(char));
 
-	if (concat == NULL)
-	{
-		return (NULL);
-	}
-	_strcpy(concat, s1);
-	_strncat(concat, s2, n);
-	return (concat);
-}
+        if (s == NULL)
+                return (NULL);
+        /* copy s1 */
+        for (i = 0; s1[i] != '\0'; i++)
+        {
+                s[i] = s1[i];
+        }
+
+        /* concatenate  */
+        for (j = 0; j < n; j++)
+        {
+                s[i] = s2[j];
+                i++;
+        }
+
+        /* add null terminator */
+        s[i] = '\0';
+        return (s);
+} 
