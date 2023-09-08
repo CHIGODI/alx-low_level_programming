@@ -1,4 +1,6 @@
 #include <stdlib.h>
+#include "main.h"
+#include <stddef.h>
 
 /**
  * _memcpy - A function that copies memory data
