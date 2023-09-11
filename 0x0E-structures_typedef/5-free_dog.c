@@ -2,8 +2,10 @@
 #include <stdlib.h>
 
 /**
- * free_dog - Frees memory allocated for a dog_t struct.
- * @d: Pointer to the dog_t struct to be freed.
+ * free_dog - Frees dog
+ * @d: Dog to be freed.
+ *
+ * Return: void
  */
 void free_dog(dog_t *d)
 {
