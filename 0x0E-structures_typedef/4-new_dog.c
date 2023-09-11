@@ -1,7 +1,7 @@
 #include "dog.h"
 #include <stdlib.h>
 /**
- * custom_strdup - Duplicates a string using dynamic memory allocation
+ * _strdup - Duplicates a string using dynamic memory allocation
  * @str: The string to be duplicated
  *
  * Return: A pointer to the newly duplicated string.
@@ -40,6 +40,7 @@ char *_strdup(char *str)
 dog_t *new_dog(char *name, float age, char *owner)
 {
 	dog_t  *newDog = NULL;
+
 	if (name == NULL || owner == NULL)
 		return (NULL);
 
@@ -55,7 +56,8 @@ dog_t *new_dog(char *name, float age, char *owner)
 	newDog->owner = _strdup(owner);
 
 
-	if (newDog->name == NULL || newDog->owner == NULL) {
+	if (newDog->name == NULL || newDog->owner == NULL)
+	{
 		free(newDog->name);
 		free(newDog->owner);
 		free(newDog);
