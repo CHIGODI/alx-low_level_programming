@@ -40,22 +40,22 @@ char *_strdup(char *str)
  */
 dog_t *new_dog(char *name, float age, char *owner)
 {
-	dog_t  *newDog = NULL;
+	dog_t  *copy = NULL;
 
 	if (name == NULL || owner == NULL)
 		return (NULL);
 
 
-	newDog = malloc(sizeof(dog_t));
+	copy = malloc(sizeof(dog_t));
 
 
-	if (newDog == NULL)
+	if (copy == NULL)
 		return (NULL);
 
 
-	newDog->name = _strdup(name);
-	newDog->owner = _strdup(owner);
-	newDog->age = age;
+	copy->name = _strdup(name);
+	copy->owner = _strdup(owner);
+	copy->age = age;
 	
-	return (newDog);
+	return (copy);
 }
