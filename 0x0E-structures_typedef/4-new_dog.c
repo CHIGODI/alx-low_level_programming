@@ -1,36 +1,9 @@
 #include "dog.h"
+#include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
 /**
- * _strdup - Duplicates a string using dynamic memory allocation
- * @str: The string to be duplicated
- *
- * Return: A pointer to the newly duplicated string.
- *         NULL if memory allocation fails.
- */
-char *_strdup(char *str)
-{
-	char *duplicate;
-	int len, i;
-
-	if (str == NULL)
-		return (NULL);
-
-	for (len = 0; str[len] != '\0'; len++)
-		;
-
-
-	duplicate = malloc(sizeof(char) * (len + 1));
-
-	if (duplicate == NULL)
-		return (NULL);
-	for (i = 0; i <= len; i++)
-		duplicate[i] = str[i];
-
-	duplicate[len] = '\0';
-	return (duplicate);
-}
-/**
- * new_dog - Creates a new dog struct
+ * new_dog - creates new dog
  * @name: The name of the dog
  * @age: The age of the dog
  * @owner: The owner of the dog
@@ -40,22 +13,43 @@ char *_strdup(char *str)
  */
 dog_t *new_dog(char *name, float age, char *owner)
 {
-	dog_t  *copy = NULL;
+	dog_t *d = NULL;
+	int i, j;
 
 	if (name == NULL || owner == NULL)
 		return (NULL);
 
-
-	copy = malloc(sizeof(dog_t));
-
-
-	if (copy == NULL)
+	d = malloc(sizeof(dog_t));
+	if (d == NULL)
 		return (NULL);
 
-
-	copy->name = _strdup(name);
-	copy->owner = _strdup(owner);
-	copy->age = age;
-	
-	return (copy);
+	for (i = 0; name[i] != '\0'; i++)
+		;
+	d->name = malloc(sizeof(char) * (i + 1));
+	if (d->name == NULL)
+	{
+		free(d);
+		return (NULL);
+	}
+	for (j = 0; owner[j] != '\0'; j++)
+		;
+	d->owner = malloc(sizeof(char) * (j + 1));
+	if (d->owner == NULL)
+	{
+		free(d->name);
+		free(d);
+		return (NULL);
+	}
+	for (i = 0; name[i] != '\0'; i++)
+	{
+		d->name[i] = name[i];
+	}
+	d->name[i] = '\0';
+	for (j = 0; owner[j] != '\0'; j++)
+	{
+		d->owner[j] = owner[j];
+	}
+	d->owner[j] = '\0';
+	d->age = age;
+	return (d);
 }
