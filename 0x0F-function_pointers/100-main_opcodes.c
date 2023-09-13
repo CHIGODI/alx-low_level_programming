@@ -17,7 +17,7 @@ int main(int argc, char *argv[])
     if (argc != 2)
     {
         printf("Error\n");
-        return (1);
+        exit(1);
     }
 
     p = atoi(argv[1]);
@@ -25,7 +25,7 @@ int main(int argc, char *argv[])
     if (p < 0)
     {
         printf("Error\n");
-        return (1);
+        exit(2);
     }
 
     for (i = 0; i < p; i++)
