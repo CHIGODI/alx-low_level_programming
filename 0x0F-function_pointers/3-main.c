@@ -25,7 +25,7 @@ int main(int ac, char *av[])
 	op = av[2];
 	num2 = atoi(av[3]);
 
-	if (*op != '+' && *op != '-' && *op != '*' && *op != '/' && *op != '%' && argv[2][1] != '\0')
+	if (*op != '+' && *op != '-' && *op != '*' && *op != '/' && *op != '%')
 	{
 		printf("Error\n");
 		exit(99);
