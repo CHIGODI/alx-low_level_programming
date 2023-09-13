@@ -1,7 +1,3 @@
-Certainly! Here's a concise and informative `README.md` for your GitHub repository:
-
----
-
 # Function Pointers in C
 
 This repository contains C programs that demonstrate the use of function pointers and related concepts. It includes solutions to tasks covering various aspects of function pointers in C.
