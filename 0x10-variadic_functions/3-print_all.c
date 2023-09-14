@@ -44,8 +44,7 @@ void print_all(const char * const format, ...)
 				i++;
 				break;
 			}
-			if (*(s + 1))
-				printf(", ");
+				printf("\n");
 		}
 	}
 	va_end(args);
