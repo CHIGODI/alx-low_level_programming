@@ -9,7 +9,7 @@
  * @filename: file to be created
  * @text_content: content to be written
  *
- * Return:
+ * Return:1 on success -1 on failure
  *
  */
 int create_file(const char *filename, char *text_content)
