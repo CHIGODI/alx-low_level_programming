@@ -40,7 +40,7 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	}
 
 	bytes_written = write(1, ch, bytes_read);
-	if (bytes_written == -1 || bytes_written != bytes_read)
+	if (bytes_written == -1 && bytes_written != bytes_read)
 	{
 		free(ch);
 		fclose(fp);
