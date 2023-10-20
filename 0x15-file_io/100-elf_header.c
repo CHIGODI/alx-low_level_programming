@@ -6,11 +6,19 @@
 #include <string.h>
 #include <elf.h>
 
+/**
+ * print_error - Print an error message to stderr and exit with status 98.
+ * @message: The error message to display.
+ */
 void print_error(const char *message) {
     fprintf(stderr, "%s\n", message);
     exit(98);
 }
 
+/**
+ * print_elf_header_info - Print information from the ELF header.
+ * @header: Pointer to the ELF header structure.
+ */
 void print_elf_header_info(Elf64_Ehdr *header) {
     printf("Magic:   ");
     for (int i = 0; i < EI_NIDENT; i++) {
@@ -28,6 +36,12 @@ void print_elf_header_info(Elf64_Ehdr *header) {
     printf("Entry point address: 0x%lx\n", (unsigned long)header->e_entry);
 }
 
+/**
+ * main - Entry point of the program.
+ * @argc: The number of command-line arguments.
+ * @argv: An array of strings representing the command-line arguments.
+ * Return: 0 on success, 98 on error.
+ */
 int main(int argc, char *argv[]) {
     if (argc != 2) {
         print_error("Usage: elf_header elf_filename");
@@ -40,7 +54,7 @@ int main(int argc, char *argv[]) {
     }
 
     Elf64_Ehdr header;
-    ssize_t n = read(fd, &header, sizeof(header));
+    ssize_t n = read(fd, &header, sizeof(header);
     if (n == -1) {
         print_error("Error reading ELF header");
     }
