@@ -1,6 +1,27 @@
 #include "lists.h"
 #include <stdlib.h>
 /**
+ * dlistint_len - returns length of dlistint_t
+ * @h: pointer to first node
+ *
+ * Return: length of list
+ *
+ */
+size_t dlistint_len(const dlistint_t *h)
+{
+        unsigned int count = 0;
+
+        if (h == NULL)
+                return (0);
+
+        while (h != NULL)
+        {
+                count++;
+                h = h->next;
+        }
+        return (count);
+}
+/**
  * insert_dnodeint_at_index - inserts a new node at a
  *                            given position
  * @h: pointer to pointer of first node
@@ -14,20 +35,21 @@ dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 {
 	dlistint_t *new_node, *temp, *prev;
 	unsigned int index_check = 0;
+	unsigned int len = 0;
 
 	new_node = malloc(sizeof(dlistint_t));
 	if (new_node == NULL)
 		return (NULL);
 
+	len = dlistint_len(*h);
 	new_node->n = n;
 
-	if (*h == NULL)
-	{
-		new_node->next = *h;
-		new_node->prev = NULL;
-		*h = new_node;
-		return (new_node);
-	}
+	if (*h == NULL && idx > 0)
+		return (NULL);
+
+	if (idx > len)
+		return (NULL);
+
 	temp = *h;
 	while (temp != NULL)
 	{
@@ -38,9 +60,9 @@ dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 			prev->next = new_node;
 			return (new_node);
 		}
-		index_check++;
 		prev = temp;
 		temp = temp->next;
+		index_check++;
 	}
 	return (NULL);
 }
