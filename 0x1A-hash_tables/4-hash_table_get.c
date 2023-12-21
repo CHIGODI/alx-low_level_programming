@@ -10,18 +10,18 @@
  */
 char *hash_table_get(const hash_table_t *ht, const char *key)
 {
-	hast_table_t *curr_node;
+	hash_node_t *curr_node;
 	unsigned int index;
 
 	if (key == NULL || ht == NULL)
 		return (NULL);
 
-	index = key_index((const unsigned int char *(key)), ht->size);
+	index = key_index((const unsigned char *)key, ht->size);
 	curr_node = ht->array[index];
 	while (curr_node != NULL)
 	{
-		if (strcmp(curr_node, key) == 0)
-			return (curr_node);
+		if (strcmp(curr_node->key, key) == 0)
+			return (curr_node->value);
 
 		curr_node = curr_node->next;
 	}
