@@ -8,8 +8,9 @@
  */
 void hash_table_delete(hash_table_t *ht)
 {
-	hash_node_t *node, *prev;
-	unsigned int i;
+	hash_node_t *node = NULL;
+	hash_node_t *prev = NULL;
+	unsigned long int i;
 
 	if (ht == NULL)
 		return;
