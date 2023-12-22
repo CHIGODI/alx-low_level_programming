@@ -19,9 +19,7 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 		return (0);
 
 	index = key_index((const unsigned char *)key, ht->size);
-
 	curr = ht->array[index];
-	/** if key already exists in list update it value/overwrite its value**/
 	while (curr != NULL)
 	{
 		if (strcmp(curr->key, key) == 0)
@@ -37,7 +35,6 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	array_node = malloc(sizeof(hash_node_t));
 	if (array_node == NULL)
 		return (0);
-
 	array_node->key = strdup(key);
 	if (array_node->key == NULL)
 	{
@@ -53,6 +50,5 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	}
 	array_node->next = ht->array[index];
 	ht->array[index] = array_node;
-
 	return (1);
 }
