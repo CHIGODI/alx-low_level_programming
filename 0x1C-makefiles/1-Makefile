@@ -1,12 +1,8 @@
 # _*_ MakeFile _*_
+CC = gcc
+SRC = main.c school.c
 
-CC := gcc
-SRC := $(wildcard *.c)
-
-all: school clean
+all: school
 
 school: $(SRC)
-	$(CC) $(SRC) -o school
-
-clean:
-	@rm -f school
+	$(CC) -o school $(SRC)
