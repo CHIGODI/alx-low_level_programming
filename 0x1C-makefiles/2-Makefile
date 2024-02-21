@@ -12,10 +12,3 @@ all: $(NAME)
 
 $(NAME): $(OBJ)
 	$(CC) $^ -o $@
-
-%.o: %.c
-	$(CC) -c $< -o $@
-
-.PHONY: clean
-clean:
-	rm -f $(OBJ) $(NAME)
