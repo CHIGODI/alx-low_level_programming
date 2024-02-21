@@ -1,0 +1,21 @@
+# _*_ MakeFile_*_
+# $@: Represents the target.
+# $<: Represents the first dependency.
+
+
+CC := gcc
+SRC := $(wildcard *.c)
+OBJ := $(SRC:.c=.o)
+NAME := school
+
+all: $(NAME)
+
+$(NAME): $(OBJ)
+	$(CC) $^ -o $@
+
+%.o: %.c
+	$(CC) -c $< -o $@
+
+.PHONY: clean
+clean:
+	rm -f $(OBJ) $(NAME)
