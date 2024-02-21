@@ -1,9 +1,12 @@
 # _*_ MakeFile _*_
 
-all: school
+CC := gcc
+SRC := $(wildcard *.c)
 
-CC:= gcc
-SRC:= $(wildcard *.c)
+all: school clean
 
 school: $(SRC)
-	 $(CC) $(SRC) -o school
+	$(CC) $(SRC) -o school
+
+clean:
+	@rm -f school
