@@ -3,10 +3,10 @@
 # $<: Represents the first dependency.
 
 
-CC := gcc
-SRC := $(wildcard *.c)
-OBJ := $(SRC:.c=.o)
-NAME := school
+CC = gcc
+SRC = $(wildcard *.c)
+OBJ = $(SRC:.c=.o)
+NAME = school
 
 all: $(NAME)
 
