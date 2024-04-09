@@ -11,8 +11,10 @@
  */
 int binary_search(int *array, size_t size, int value)
 {
-	size_t left = 0, right = size - 1, middle = size, i = 0;
+	size_t left = 0, right = size - 1, middle;
 
+	if (size == 0)
+		return (-1);
 
 	while (left <= right)
 	{
@@ -38,7 +40,6 @@ int binary_search(int *array, size_t size, int value)
 		{
 			return (middle);
 		}
-		i++;
 	}
 	return (-1);
 }
